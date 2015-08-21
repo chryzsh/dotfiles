@@ -1,0 +1,127 @@
+Xft.dpi:	96
+Xft.antialias:	true
+Xft.rgba:	rgb
+Xft.hinting:	true
+Xft.hintstyle:	hintslight
+Xft.lcdfilter:	lcddefault
+
+URxvt.font: xft:DejaVu Sans Mono:regular:size=10
+URxvt.letterSpace: -1
+
+URxvt.perl-ext-common: default,clipboard,vtwheel,font-size,matcher
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.clipboard.autocopy: true
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.scrollBar: false
+
+URxvt*depth: 32
+!URxvt*transparent: true
+!URxvt*shading:       7
+!URxvt*blurRadius:    20 
+
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 1
+
+
+!0 black
+!1 red
+!2 green
+!3 brown
+!4 blue
+!5 purple 
+!6 light gray
+!7 cyan
+!8 gray
+!9 red
+!10 green
+!11 yellow
+!12 light blue
+!13 light purple
+!14 light cyan
+!15 white
+
+!! Molokai theme
+!URxvt*background: #1d1f21
+!URxvt*foreground: #d0d0d0
+!
+!! black
+!*color0:        #1C1C1C
+!*color8:        #666666
+!
+!! red
+!*color1:        #ff005b
+!*color9:        #ff00a0
+!
+!! green
+!*color2:        #cee318
+!*color10:       #ccff00
+!
+!! yellow
+!*color3:        #ffe755
+!*color11:       #ff9f00
+!
+!! blue
+!*color4:        #048ac7
+!*color12:       #48c6ff
+!
+!! magenta
+!*color5:        #833c9f
+!*color13:       #be67e1
+!
+!! cyan 
+!*color6:        #0ac1cd
+!*color14:       #63e7f0
+!
+!! white
+!*color7:        #e5e5e5
+!*color15:       #f3f3f3
+
+! Base16 Flat
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2C3E50
+#define base01 #34495E
+#define base02 #7F8C8D
+#define base03 #95A5A6
+#define base04 #BDC3C7
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ECF0F1
+#define base08 #E74C3C
+#define base09 #E67E22
+#define base0A #F1C40F
+#define base0B #2ECC71
+#define base0C #1ABC9C
+#define base0D #3498DB
+#define base0E #9B59B6
+#define base0F #be643c
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07

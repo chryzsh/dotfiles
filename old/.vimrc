@@ -4,12 +4,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'Townk/vim-autoclose'
     Plug 'tpope/vim-surround'
     Plug 'PotatoesMaster/i3-vim-syntax'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
     Plug 'ervandew/supertab'
     Plug 'lervag/vimtex'
-    Plug 'chrisbra/sudoedit.vim'
-call plug#end()
+call plug#end() 
 
 "INTERFACE
     set cursorline                              " hilight cursor line
@@ -85,13 +83,6 @@ call plug#end()
 
 "LIGHTLINE
 
-"let g:lightline = {
-"    \ 'colorscheme': 'base16',
-"    \}
-
-"AIRLINE
-let g:airline= {
-    \ 'colorscheme': 'onedark',
+let g:lightline = {
+    \ 'colorscheme': '16color',
     \}
-
-

@@ -159,7 +159,7 @@ function configcopy() {
     cp ~/.config/fontconfig/fonts.conf $dotconf/fontconfig
     cp ~/.config/redshift.conf $dotconf
     cp ~/.config/rofi/config $dotconf/rofi
-    cp ~/.config/polybar/ $dotconf/polybar -r
+    cp ~/.config/polybar/ $dotconf/ -r
     cp ~/.config/termite/config $dotconf/termite
     cp ~/.config/gtk-3.0/settings.ini $dotconf/gtk-3.0
     cp ~/.config/i3/config $dotconf/i3

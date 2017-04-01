@@ -146,6 +146,7 @@ function configcopy() {
     cp ~/.xbindkeysrc $conf
     cp ~/.xinitrc $conf
     cp ~/.Xresources $conf
+    cp ~/.Xmodmap $conf
     cp ~/.zshrc $conf
 
     mkdir -p $dotconf/fontconfig

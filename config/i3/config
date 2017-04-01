@@ -264,6 +264,7 @@ exec --no-startup-id xbindkeys
 exec --no-startup-id ~/.screenlayout/screen.sh &
 exec --no-startup-id hsetroot -solid "#ba8baf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xmodmap .Xmodmap
 
 set $monitor1 HDMI1
 set $monitor2 HDMI2

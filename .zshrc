@@ -139,7 +139,7 @@ function configcopy() {
     dotconf="/home/chris/dotfiles/config"
     cp ~/.bashrc $conf
     cp ~/check.sh $conf
-    cp ~/colortest $conf
+    cp ~/.colortest.sh $conf
     cp ~/.compton.conf $conf
     cp ~/.gtkrc-2.0 $conf
     cp ~/.i3blocks.conf $conf

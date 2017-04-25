@@ -11,11 +11,11 @@
 #   b:7
 
 # backward button => previous song
-"xte 'key XF86AudioPrev'"
+#"xte 'key XF86AudioPrev'"
    b:8
 
 # forward button => next song
-"xte 'key XF86AudioNext'"
+#"xte 'key XF86AudioNext'"
    b:9
 
 # thumb button => go back in history
@@ -24,5 +24,5 @@
 # prevents that X receives those keypresses simultaniously. Therefore they
 # might interfere and trigger unwanted actions. By the sleep we make sure that
 # the Alt+Left is receive as distinct event.
-"sleep 0.1 && xte 'key XF86AudioPlay'"
+#"sleep 0.1 && xte 'key XF86AudioPlay'"
    m:0xc + c:23

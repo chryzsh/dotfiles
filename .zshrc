@@ -175,7 +175,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 
 function mntshr() {
-    sudo mount -t cifs //10.0.0.2/"$1" /home/chris/mnt/"$2" -o credentials=/home/chris/.share
+   sudo mount -t cifs //10.0.0.2/"$1" /home/chris/mnt/"$2" -o credentials=/home/chris/.share,uid=chris,gid=wheel
 }
 alias tw='teamviewer --daemon start'
 alias ki="killall compton && compton -b"

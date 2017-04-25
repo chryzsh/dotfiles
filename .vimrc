@@ -10,6 +10,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'lervag/vimtex'
     Plug 'chrisbra/sudoedit.vim'
     Plug 'scrooloose/nerdtree'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'thinca/vim-quickrun'
+    Plug 'scrooloose/syntastic'
 call plug#end()
 
 "INTERFACE
@@ -86,21 +89,25 @@ call plug#end()
     noremap j gj
     noremap k gk
     map Q <nop>
+    map W <nop>
     map q <nop>
     set pastetoggle=<F3>
-    nnoremap <C-J> <C-W><C-J>
-    nnoremap <C-K> <C-W><C-K>
-    nnoremap <C-L> <C-W><C-L>
-    nnoremap <C-H> <C-W><C-H>
-
-"LIGHTLINE
-
-"let g:lightline = {
-"    \ 'colorscheme': 'base16',
-"    \}
+    noremap <C-J> <C-W><C-J>
+    noremap <C-K> <C-W><C-K>
+    noremap <C-L> <C-W><C-L>
+    noremap <C-H> <C-W><C-H>
+    noremap <F4> :Autoformat<CR>
 
 "AIRLINE
 let g:airline= {
     \ 'colorscheme': 'onedark',
     \}
 
+let g:formatdef_custom_c='"astyle --mode=c --style=kr --suffix=none"'
+let g:formatters_c = ['custom_c']
+let g:autoformat_verbosemode=1
+
+nnoremap <silent> <F5> :QuickRun -mode n<CR>
+vnoremap <silent> <F5> :QuickRun -mode v<CR>
+"let g:quickrun_config = {'outputter/buffer/into': 1}
+"let g:quickrun_config = {'outputter': 'file' }

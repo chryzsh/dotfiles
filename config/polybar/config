@@ -7,8 +7,10 @@
 ;
 ;=====================================================
 
+
 [colors]
 background = ${colors.base00}
+;background = ${colors.baseaa}
 background-alt = ${colors.base01}
 foreground = ${colors.base05}
 foreground-alt = ${colors.base07}
@@ -16,22 +18,23 @@ primary = ${colors.base0a}
 secondary = ${colors.base0e}
 alert = ${colors.base08}
 
-base00 = 2B303B
-base08 = AB4642
-base0b = A1B56C
-base0a = F7CA88
-base0d = 7CAFC2
-base0e = BA8BAF
-base0c = 86C1B9
-base05 = D8D8D8
-base03 = 585858
-base07 = F8F8F8
-base09 = DC9656
-base0f = A16946
-base01 = 282828
-base02 = 383838
-base04 = B8B8B8
-base06 = E8E8E8
+base00 = 282C34
+baseaa = 00282C34
+base01 = 353B45
+base02 = 3E4451
+base03 = 545862
+base04 = 565C64
+base05 = ABB2BF
+base06 = B6BDCA
+base07 = C8CCD4
+base08 = E06C75
+base09 = D19A66
+base0a = E5C07B
+base0b = 98C379
+base0c = 56B6C2
+base0d = 61AFEF
+base0e = C678DD
+base0f = BE5046
 
 [bar/bar1]
 monitor = ${env:MONITOR:HDMI1}
@@ -66,11 +69,11 @@ font-0 = Tamzen:pixelsize=14;1
 font-1 = FontAwesome:size=12;2
 
 modules-left = i3
-modules-right = volume cpu temperature date weather
+modules-right = volume cpu temp weather date
 modules-center = spotify
 tray-position = right
 tray-padding = 1
-;tray-transparent = true
+tray-transparent = true
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -284,7 +287,7 @@ format-volume-underline = ${colors.base0a}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = 
+label-muted =  mute
 
 bar-volume-width = 5
 bar-volume-foreground-0 = #55aa55
@@ -401,10 +404,11 @@ label = %output%
 type = custom/script
 interval = 1200
 format = <label>
-format-underline = #dc322f
+format-underline = ${colors.base0e}
 label = "%output:0:30%"
-exec = .config/polybar/pkg.sh
-exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+exec = ~/.config/polybar/pkg.sh
+;exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+;checks with DDG if connected to internet
 
 [module/redshift]
 type = custom/script
@@ -420,5 +424,13 @@ format-prefix-foreground = ${colors.foreground-alt}
 exec = ~/.config/polybar/weather.sh
 format-underline = ${colors.foreground-alt}
 
-vim:ft=dosini
 
+[module/temp]
+type = custom/script
+interval = 10
+exec = ~/.config/polybar/temp.sh
+format-prefix = " "
+format-underline = ${colors.base08}
+
+
+vim:ft=dosini
